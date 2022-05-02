@@ -2,7 +2,6 @@ import asyncio
 from shazamio import Shazam
 import tkinter as tk
 from tkinter import filedialog
-import file_tagger
 import mutagen
 from mutagen.easyid3 import EasyID3
 

@@ -14,7 +14,7 @@ def discogstokenchecker(user_token):
             with open("api.env", "w") as api_file:
                 api_file.writelines(to_write)
                 api_file.close()
-            print("Establishing a connection from the given API...")
+            print("Establishing connection from the given API...")
             d = discogs_client.Client('fulltagz/1.0', user_token=user_token)
             results = d.search('Stockholm By Night', type='release')
             print(results.pages)
@@ -28,7 +28,7 @@ def discogstokenchecker(user_token):
         user_token = os.environ.get("DISCOGS_TOKEN")
         print("Please Wait")
         try:
-            print("Establishing a connection from the enviroment file...")
+            print("Establishing connection from the enviroment file...")
             d = discogs_client.Client('fulltagz/1.0', user_token=user_token)
             results = d.search('Stockholm By Night', type='release')
             print(results.pages)
